@@ -15,10 +15,11 @@ struct Num {
 }
 
 fn main() {
-    let input = fs::read_to_string("input.txt").expect("coulnd't open the file");
+    let input = fs::read_to_string("input.txt").expect("couldn't open the file");
     let lines = input.lines().collect::<Vec<_>>();
 
-    part_one(&lines);
+    let res = part_one(&lines);
+    println!("{}", res);
 }
 
 fn part_one(lines: &[&str]) -> u32 {
