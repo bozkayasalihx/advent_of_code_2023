@@ -4,7 +4,7 @@ fn main() {
     let input = fs::read_to_string("input.txt").expect("coullnd't opne the file");
     let lines = input.lines().collect::<Vec<_>>();
 
-    let res = part_one(&lines);
+    // let res = part_one(&lines);
     let res = part_two(&lines);
 
     println!("{}", res);
@@ -75,8 +75,8 @@ fn part_two(lines: &[&str]) -> u32 {
         let [amount, next_cards @ ..] = &mut cards[idx..=(idx + count)] else {
             unreachable!();
         };
+
         next_cards.iter_mut().for_each(|c| *c += *amount);
     }
-
     cards.into_iter().sum()
 }
