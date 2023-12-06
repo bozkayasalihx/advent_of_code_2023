@@ -31,7 +31,6 @@ fn part_one(lines: &[&str]) -> u32 {
         let mut cur = 0;
         for i in 1..=*t {
             if (t - i) * i > dist {
-                println!("t {} -> i {}", t, i);
                 cur += 1;
             }
         }
@@ -62,8 +61,6 @@ fn part_two(lines: &[&str]) -> usize {
         .parse::<usize>()
         .unwrap();
 
-    println!("dest {}", dest);
-    println!("time {}", time);
     let mut cur = 0;
     for i in 1..=time {
         if (time - i) * i > dest {
