@@ -102,3 +102,18 @@ fn gcd(first: usize, second: usize) -> usize {
         min = res;
     }
 }
+
+fn gcd_2(first: usize, second: usize) -> usize {
+    let small = if first > seconc { second } else { first };
+    let mut count = 1;
+
+    while count <= small {
+        if first % count == 0 && second % count == 0 {
+            return count;
+        }
+
+        count += 1;
+    }
+
+    0
+}
